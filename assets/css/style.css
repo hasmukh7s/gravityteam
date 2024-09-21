@@ -1,0 +1,1227 @@
+@charset "utf-8";
+
+/* Table of Contents
+---------------------------------------------------
+    1. Fonts
+    2. Variables
+    3. Clean Base
+    4. Base Typography
+    5. Images
+    6. Links
+    7. Forms
+    8. Tables
+*/
+
+/* 1. Fonts
+---------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/* 2. Variables
+---------------------------------------------------*/
+
+:root {
+    --Inter: "Inter", sans-serif;
+    --lightgray: #E5E5E5;
+    --white: #FFFFFF;
+    --black: #141918;
+    --footergray: #BCBCBC;
+    --bggradient: linear-gradient(140deg, #665DCD, #5FA4E6, #D2AB67);
+}
+
+
+/* 3. Clean Base
+---------------------------------------------------*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+a,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+img {
+    border: none;
+}
+
+select,
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea {
+    -webkit-appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea:focus,
+input:focus,
+a,
+div,
+img {
+    outline: none;
+}
+
+.clear {
+    clear: both;
+}
+
+/* 2. Base Typography
+---------------------------------------------------*/
+body {
+    color: var(--white);
+    font-family: var(--Inter);
+    background: var(--black);
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--Inter);
+    color: var(--white);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 74px;
+}
+
+h2 {
+    font-size: 56px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 38px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-family: var(--Inter);
+    color: var(--lightgray);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+ul {
+    /* margin: 0px 0px 0px 20px; */
+    margin: 0px;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    /* margin: 0px 0px 0px 20px; */
+    margin: 0px;
+}
+
+ol {
+    /* margin: 0px 0px 0px 20px; */
+    margin: 0px;
+    padding: 0;
+}
+
+ol li {
+    /* margin: 0px 0px 20px; */
+    margin: 0;
+}
+
+blockquote {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+    background: #f3f3f3;
+    padding: 20px 20px 10px 20px;
+    border-left: 2px solid var(--black);
+}
+
+blockquote p {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+hr {
+    border: 0 solid var(--lightgray);
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+
+/* 3. Images
+---------------------------------------------------*/
+img {
+    border: none;
+    border-style: none;
+    max-width: 100%;
+}
+
+/* 4. Link
+---------------------------------------------------*/
+a {
+    color: var(--white);
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:active,
+a.current {
+    color: var(--lightgray);
+}
+
+a:focus {
+    outline: none;
+}
+
+/* 5. Forms
+---------------------------------------------------*/
+input {
+    padding: 14px 16px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    outline: none;
+}
+
+textarea {
+    border: 1px solid var(--lightgray);
+    padding: 14px 14px;
+    font-size: 16px;
+    min-height: 200px;
+    resize: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background: var(--white);
+    width: 100%;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    background: var(--white);
+    cursor: pointer;
+    border: none;
+    display: block;
+    font-size: 19px;
+    border: 2px solid var(--gray);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 14px 15px;
+    line-height: 22px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: var(--white);
+    color: #000;
+}
+
+select {
+    border: 2px solid var(--gray);
+    padding: 14px 30px;
+    color: var(--black);
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    line-height: 22px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-weight: 300;
+    background: var(--white);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    background-position: calc(100% - 10px) center;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: left;
+    font-weight: normal;
+}
+
+/* ------------------------------------- button ---------------------------------------- */
+
+button {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    border: none;
+    font-weight: 100;
+    padding: 10px 45px;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    color: var(--white);
+    background-image: var(--bggradient);
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+
+.primary-btn:hover {
+    font-weight: 600;
+    color: var(#fff);
+}
+
+
+
+/* Standard style End */
+
+
+/*---------------------------------- Standard Clasess -----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Inter);
+}
+
+.container {
+    max-width: 1120px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    width: 612px;
+    margin: auto;
+    margin-bottom: 64px;
+}
+
+/* Header */
+
+.header {
+    padding: 20px 64px;
+}
+
+.header .navbar-nav .navbar {
+    gap: 30px;
+}
+
+.header .navbar-nav .navbar a {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.header .navbar-nav .getintouch a {
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.header .navbar-nav .logo-brand {
+    margin-top: 6px;
+    width: 180px;
+}
+
+.header.is-sticky {
+    position: fixed;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+    width: 100%;
+    padding: 15px 30px;
+    z-index: 5;
+}
+
+.header.is-sticky img {
+    max-width: 80%;
+}
+
+.header.is-sticky button {
+    font-size: 14px;
+    padding: 7px 10px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+    display: none;
+}
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+
+.line {
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+/* Hero */
+.hero-section {
+    text-align: center;
+    min-height: 87.5vh;
+    padding: 50px 0 0;
+}
+
+.hero-section .banner {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .banner .banner-inner {
+    width: 550px;
+}
+
+.hero-section .banner .primary-btn {
+    margin: auto;
+}
+
+.hero-section .banner .banner-inner p,
+.hero-section .banner .banner-inner h1 {
+    margin-bottom: 40px;
+}
+
+/* Team */
+.team-section {
+    margin-bottom: 128px;
+}
+
+.team-section .team-counter .counter {
+    border: 1px solid #5FA4E6;
+    padding: 30px 20px 10px 20px;
+    width: 25%;
+    transition: all 0.8s ease-in-out;
+}
+
+.team-section .team-counter .counter:hover {
+    background-image: var(--bggradient);
+}
+
+.team-section .team-counter .counter-border-top {
+    border-top: 0;
+}
+
+.team-section .team-counter .counter-border-bottom {
+    border-bottom: 0;
+}
+
+.team-section .team-counter .counter-border-left {
+    border-left: 0;
+}
+
+.team-section .team-counter .counter-border-right {
+    border-right: 0;
+}
+
+/* Crypto Market */
+
+.crypto-market-section {
+    position: relative;
+
+}
+
+.crypto-market-section .crypto-market-img {
+    position: absolute;
+    top: -10%;
+    right: 17%;
+    z-index: -1;
+}
+
+.crypto-market-section .crypto-market {
+    margin: 100px 0;
+}
+
+.crypto-market-section .crypto-market .left {
+    width: 40%;
+}
+
+.crypto-market-section .crypto-market .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crypto-market-section .crypto-market .left p {
+    margin-bottom: 40px;
+}
+
+.crypto-market-section .crypto-market .left a {
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.crypto-market-section .crypto-market .right {
+    width: 60%;
+    display: flex;
+}
+
+/* Our Partners */
+
+.our-partners-section {
+    position: relative;
+
+}
+
+.our-partners-section .our-partners-img {
+    position: absolute;
+    z-index: -1;
+    left: -330px;
+    top: -220px;
+}
+
+.our-partners-section .our-partners .left {
+    width: 40%;
+}
+
+.our-partners-section .our-partners .right {
+    width: 40%;
+}
+
+/* Gravity Team */
+
+.gravity-team-section {
+    padding: 128px 0;
+}
+
+.gravity-team-section .gravity-team .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gravity-team-section .gravity-team .left {
+    position: relative;
+    width: 40%;
+}
+
+.gravity-team-section .gravity-team .left .gravity-team-img {
+    position: absolute;
+    top: -67px;
+    left: -87px;
+    z-index: -1;
+}
+
+.gravity-team-section .gravity-team .right a {
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.gravity-team-section .gravity-team .right a {
+    margin-top: 30px;
+}
+
+/* Contact Us */
+.contact-us-section {
+    background: url(../../assets/photos/contact-bg-img.png);
+    background-position: center;
+    background-color: #141619;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.contact-us-section .heading p {
+    margin-bottom: 40px;
+}
+
+.contact-us-section .heading {
+    width: 623px;
+}
+
+/* Footer */
+.footer .top .top-menu a {
+    font-size: 18px;
+    color: var(--lightgray);
+}
+
+.footer {
+    padding: 100px 0 60px;
+}
+
+.footer .top {
+    margin-bottom: 60px;
+}
+
+.footer .bottom a,
+.footer .bottom p {
+    font-size: 18px;
+    color: var(--lightgray);
+}
+
+/* Company Testimonial */
+.company-testimonial-section {}
+
+.company-testimonial-section .company-testimonial {
+    width: 678px;
+    margin: auto;
+}
+
+.company-testimonial-section .company-testimonial p {
+    margin-bottom: 40px;
+}
+
+.company-testimonial-section .company-testimonial .company-testimonial-user-detail p {
+    font-size: 14px;
+    margin-bottom: 0;
+    gap: 6px;
+}
+
+.company-testimonial-section .company-testimonial .company-testimonial-user-detail p img {
+    width: 100px;
+    margin-bottom: 2px;
+}
+
+.company-testimonial-section .slide {
+    padding: 100px 0;
+}
+
+/* Company Testimonial Slider Design */
+
+/* Arrow */
+.company-testimonial-section .slick-prev:before {
+    content: url(../../assets/photos/left-arrow.png);
+}
+
+.company-testimonial-section .slick-next:before {
+    content: url(../../assets/photos/right-arrow.png);
+}
+
+.company-testimonial-section .slick-prev,
+.company-testimonial-section .slick-next {
+    top: 20px;
+    z-index: 5;
+}
+
+.company-testimonial-section .slick-prev {
+    left: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-testimonial-section .slick-next {
+    right: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dot */
+.company-testimonial-section .slick-dots li.slick-active button:before {
+    content: url(../../assets/photos/dot.png);
+    top: -6px;
+}
+
+.company-testimonial-section .slick-dots li button:before {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.company-testimonial-section {
+    padding: 80px 0 0;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #666;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #666;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #646464;
+}
+
+::-webkit-resizer {
+    background-color: #666;
+}
+
+/* Back To Top */
+.go-top {
+    position: fixed;
+    bottom: 6%;
+    right: 4%;
+    padding: 20px;
+    display: none;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.go-top:after {
+    font-family: FontAwesome;
+    content: "\f106";
+    background-color: #E5E8F0;
+    padding: 10px 18px;
+    color: #6a6e7c;
+    position: absolute;
+    bottom: 10px;
+    font-size: 28px;
+    border-radius: 30px;
+}
+
+.go-top:hover {
+    transition: all .4s linear;
+    transform: scale(1.1);
+}
+
+
+.left a.flex img,
+.right a.flex img {
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.left a.flex:hover img,
+.right a.flex:hover img {
+    transform: translateX(5px);
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .header .navbar-nav .getintouch a,
+    .header .navbar-nav .navbar a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 46px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        padding: 20px 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .header .getintouch,
+    .header .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu .getintouch,
+    .mobile-menu .navbar {
+        display: block;
+    }
+
+    .mobile-menu .navbar {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .mobile-menu .getintouch {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        animation: slideDown 0.10s ease-out;
+        background: rgb(0 0 0 / 80%);
+        padding: 60px 0;
+        display: none;
+        z-index: 999;
+    }
+
+    .hero-section .banner .banner-inner h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .hero-section .banner .banner-inner p {
+        font-size: 18px;
+    }
+
+    .team-section .team-counter .counter {
+        width: 50%;
+    }
+
+    .crypto-market-section .crypto-market .left,
+    .crypto-market-section .crypto-market .right {
+        width: 100%;
+    }
+
+    .crypto-market-section .crypto-market .right {
+        justify-content: center;
+    }
+
+    .crypto-market-section .crypto-market {
+        gap: 20px;
+        margin: 50px 0;
+    }
+
+    .our-partners-section .our-partners {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .our-partners-section .our-partners .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-partners-section .our-partners .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gravity-team-section .gravity-team .right {
+        width: 100%;
+    }
+
+    .gravity-team-section .gravity-team .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gravity-team-section .gravity-team {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gravity-team-section {
+        padding: 80px 0;
+    }
+
+    .contact-us-section {
+        padding: 60px 0;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .crypto-market-section .crypto-market-img,
+    .our-partners-section .our-partners-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section .banner .banner-inner {
+        width: 100%;
+    }
+
+    .hero-section .banner .banner-inner h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .heading {
+        width: 100%;
+    }
+
+    .team-section {
+        margin-bottom: 60px;
+    }
+
+    .heading {
+        margin-bottom: 40px;
+    }
+
+    .gravity-team-section {
+        padding: 40px 0;
+    }
+
+    .contact-us-section .heading {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer .top {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer .bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .company-testimonial-section .company-testimonial {
+        width: 100%;
+    }
+
+    .company-testimonial-section .slide {
+        padding: 62px 0;
+    }
+
+    .company-testimonial-section .slick-prev {
+        left: 30px;
+    }
+
+    .company-testimonial-section .slick-next {
+        right: 30px;
+    }
+
+    .company-testimonial-section {
+        padding: 40px 0 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .team-section .team-counter .counter {
+        width: 100%;
+        border: 1px solid #5FA4E6;
+    }
+
+    .crypto-market-section .crypto-market .left {
+        gap: 0px;
+    }
+
+    .crypto-market-section .crypto-market .left p {
+        margin-bottom: 20px;
+    }
+
+    .gravity-team-section .gravity-team .right {
+        gap: 0px;
+    }
+
+    .gravity-team-section .gravity-team .right a {
+        margin-top: 20px;
+    }
+
+    .contact-us-section {
+        padding: 40px 0;
+    }
+}
